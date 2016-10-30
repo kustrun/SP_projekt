@@ -2,7 +2,7 @@
 <h3>I. faza</h3>
 <h4>Statična stran HTML/CSS</h4>
 <ul>
-    <li>Razvojno okolje in zasnova spletišča <b>ROK: 30. 10. 2016</b></li>
+<del><li>Razvojno okolje in zasnova spletišča <b>ROK: 30. 10. 2016</b></li></del>
     <li>Izdelava statčnih strani HTML/CSS <b>ROK: 13. 11. 2016</b></li>
     <li>Dinamičnost na strani odjemalca JavaScript <b>ROK: 20. 11. 2016</b></li>
     <li>Testiranje <b>ROK: 27. 11. 2016</b></li>
