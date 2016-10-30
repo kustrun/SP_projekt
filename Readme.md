@@ -25,6 +25,8 @@ Repozitorij spletne strani se nahaja na [spletnem naslovu](https://github.com/ku
     <li>komentarji uporabnikov, kjer je to smiselno.</li>
 </ul>
 <h6>1. 3. Zemljevid in struktura spletišča</h6>
+Zemljevid in struktura spletišča se nahajata na [spletnem naslovu](https://github.com/kustrun/SP_projekt/tree/master/docs).
 <h6>1. 4. Žični okvirji</h6>
+Žični okvirji se nahajajo na [spletnem naslovu](https://github.com/kustrun/SP_projekt/tree/master/docs/wireframes).
 
 
