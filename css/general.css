@@ -3,6 +3,27 @@
     padding: 0px;
 }
 
-a:link {
-    text-decoration: none;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    width: 1200px;
+    margin: auto;
+
+   /* background:  url("../images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;*/
+}
+
+.content {
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+    font-family: 'Oswald', sans-serif;;
+}
+
+a, p {
+    font-family: 'Raleway', sans-serif;;
 }
