@@ -1,0 +1,48 @@
+nav {
+    height: 53px;
+    width: 100vw;
+    background-color: #1b1b1b;
+}
+
+/*  NAVIGATION  */
+#menu {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*  HYPERLINKS */
+nav ul li a {
+    min-width:140px;
+    display: block;
+    text-align: center;
+    line-height: 53px;
+    text-decoration: none;
+}
+
+nav ul .home a:hover{
+    background-color: #EB9812;
+}
+
+nav ul .news a:hover{
+    background-color: #E4406E;
+}
+
+nav ul .reviews a:hover{
+    background-color: #E9CC20;
+}
+
+/*  SEARCH AND LOGIN */
+nav i {
+    color: white;
+}
