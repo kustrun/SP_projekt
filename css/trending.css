@@ -1,8 +1,7 @@
-/*  TRENDING    */
 .trending {
     width: 100% - 30px;
     height: 52px;
-    background-color: #e5e5e5;
+    background-color: #dedede;
     padding-left: 30px;
     margin-bottom: 5px;
 }
@@ -27,6 +26,7 @@
 
 .trending a {
     font-weight: 600;
+    font-size: 14px;
     text-decoration: none;
     color: #999d9d;
     margin-top: 2px;

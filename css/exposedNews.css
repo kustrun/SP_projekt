@@ -1,4 +1,7 @@
-/*  EXPOSED NEWS    */
+.exposedNews {
+    display: inline-block;
+}
+
 .bigNews, .smallNews {
     float: left;
     position: relative;
@@ -26,7 +29,7 @@
 }
 
 /*news metadata*/
-.bigNews .bigNewsInfo, .smallNews .smallNewsInfo {
+.bigNewsInfo, .smallNewsInfo {
     width: 100%;
     position: absolute;
     top: 280px;
@@ -34,18 +37,18 @@
     color: white;
 }
 
-.bigNews .bigNewsInfo h2, .smallNews .smallNewsInfo h2 {
+.bigNewsInfo h2, .smallNewsInfo h3 {
     font-size: 34px;
     font-weight: bolder;
     margin-bottom: 10px;
 }
 
-.bigNews .bigNewsInfo p, .smallNews .smallNewsInfo p {
+.bigNewsInfo p, .smallNewsInfo p {
     font-size: 16px;
     font-weight: bold;
 }
 
-.bigNews .bigNewsInfo .bigNewsMeta *, .smallNews .smallNewsInfo .smallNewsMeta * {
+.bigNewsMeta *, .smallNewsMeta * {
     display: inline-block;
 }
 
@@ -56,14 +59,14 @@
 
 
 /*small news metadata*/
-.smallNews .smallNewsInfo {
+.smallNewsInfo {
     top: 160px;
 }
 
-.smallNews .smallNewsInfo h2 {
+.smallNewsInfo h3 {
     font-size: 20px;
 }
 
-.smallNews .smallNewsInfo p {
+.smallNewsInfo p {
     font-size: 12px;
 }

@@ -1,0 +1,46 @@
+.review {
+    background-color: rgba(233, 204, 32, 0.7);
+    margin: 30px;
+    padding: 30px;
+}
+
+.review img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.review h2 {
+    margin-bottom: 10px;
+}
+
+.review p:first-of-type {
+    margin-bottom: 15px;
+}
+
+.reviewMeta {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.reviewMeta *{
+    display: inline-block;
+}
+
+.specifications {
+    float: right;
+    background-color: #dedede;
+    width: 30%;
+}
+
+.specInfo {
+    font-size: 20px;
+}
+
+.specInfo i, .bigger {
+    font-size: 40px;
+}
+
+.specInfo td {
+    width: 100px;
+}

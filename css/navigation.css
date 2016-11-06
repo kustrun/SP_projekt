@@ -11,13 +11,13 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+nav li {
     color: #FFFFFF;
     display: inline-block;
 }
 
 /*  HYPERLINKS */
-nav ul li a {
+nav a {
     color: #fafafa;
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
@@ -29,15 +29,15 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul .home a:hover{
+.home a:hover{
     background-color: #eb9812;
 }
 
-nav ul .news a:hover{
+.news a:hover{
     background-color: #e4406e;
 }
 
-nav ul .reviews a:hover{
+.reviews a:hover{
     background-color: #e9cc20;
 }
 

@@ -3,17 +3,15 @@
     padding: 0px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
 body {
     width: 1200px;
     margin: auto;
 
-   /* background:  url("../images/background.jpg");
+    background:  url("../images/background.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;*/
+    background-position: center center;
 }
 
 .content {
