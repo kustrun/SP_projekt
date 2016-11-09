@@ -45,40 +45,40 @@ footer {
     margin-bottom: 10px;
 }
 
-/* TOP 5 NEWS */
-.top5news h3 {
+/* TOP 5 NEWS AND TOP 5 REVIEWS */
+.top5news h3, .top5reviews h3 {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 45px;
 }
 
-.theNews {
+.theNews, .theReview {
     height: 90px;
 }
 
-.theNews img, .theNewsInfo {
+.theNews img, .theNewsInfo, .theReview img, .theReviewInfo {
     float: left;
 }
 
-.theNews img {
+.theNews img, .theReview img {
     margin-left: 45px;
 }
 
-.theNews h4 {
+.theNews h4, .theReview h4 {
     color: #c9c9c9;
 }
 
-.theNewsInfo {
+.theNewsInfo, .theReviewInfo {
     margin-top: 10px;
     margin-left: 20px;
 }
 
-.theNewsMeta {
+.theNewsMeta, .theReviewMeta {
     font-size: 12px;
     margin-bottom: 15px;
     color: #9e9e9e;
 }
 
-.theNewsMeta *{
+.theNewsMeta *, .theReviewMeta *{
     display: inline-block;
 }
