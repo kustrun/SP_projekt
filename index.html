@@ -2,6 +2,8 @@
 <html>
     <head>
 
+        <meta charset="UTF-8">
+
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
         <!-- FONTS -->
@@ -17,6 +19,9 @@
         <link rel="stylesheet" href="css/reviewDevices.css">
         <link rel="stylesheet" href="css/lastNewsAndReviews.css">
         <link rel="stylesheet" href="css/footer.css">
+
+        <!-- SCRIPTS -->
+        <script src="js/searchLogin.js"></script>
     </head>
 
     <body>
@@ -36,11 +41,17 @@
                     <li class="reviews"><a href="">REVIEWS</a></li>
                 </ul>
 
-                <!--<div class="searchAndLogin">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </div>-->
+                <div class="searchAndLogin">
 
+                    <div class="searchBar">
+                        <form class="searchForm" action="#" method="post">
+                            <div class="searchInput"><input type="text" name="search-terms" placeholder="Search for..." /> </div>
+                            <div class="searchLabel"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        </form>
+                    </div>
+
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
             </nav>
 
             <section class="trending">
