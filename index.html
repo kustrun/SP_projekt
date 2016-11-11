@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="css/footer.css">
 
         <!-- SCRIPTS -->
-        <script src="js/searchLogin.js"></script>
+        <script src="js/navigation.js"></script>
     </head>
 
     <body>
@@ -35,22 +35,22 @@
             </header>
 
             <nav>
+                <div id="navigationAnchor"></div>
+
                 <ul>
                     <li class="home"><a href="">HOME</a></li>
                     <li class="news"><a href="">NEWS</a></li>
                     <li class="reviews"><a href="">REVIEWS</a></li>
                 </ul>
 
-                <div class="searchAndLogin">
-
-                    <div class="searchBar">
-                        <form class="searchForm" action="#" method="post">
-                            <div class="searchInput"><input type="text" name="search-terms" placeholder="Search for..." /> </div>
-                            <div class="searchLabel"><i class="fa fa-search" aria-hidden="true"></i></div>
-                        </form>
-                    </div>
-
+                <div class="login">
                     <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+
+                <div class="search">
+                    <form action="#" method="post">
+                        <input type="text" name="search" placeholder="Search..." />
+                    </form>
                 </div>
             </nav>
 
@@ -90,7 +90,7 @@
                     </div>
 
                     <div class="bigNewsInfo">
-                        <h3>NEWS TITLE</h3>
+                        <h2>NEWS TITLE</h2>
 
                         <div class="bigNewsMeta">
                             <i class="fa fa-user" aria-hidden="true"></i>
@@ -159,7 +159,7 @@
                     </div>
 
                     <div class="smallNewsInfo">
-                        <h2>SMALL NEWS TITLE</h2>
+                        <h3>SMALL NEWS TITLE</h3>
 
                         <div class="smallNewsMeta">
                             <i class="fa fa-user" aria-hidden="true"></i>
