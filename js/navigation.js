@@ -1,6 +1,50 @@
 /**
  * Created by Domen on 10. 11. 2016.
  */
+
+function navFixed(navigation) {
+
+    navigation.setAttribute("style", "position: fixed; top: 0px; width: 1200px; z-index: 1;");
+
+}
+
+function removeNavFixed(navigation) {
+
+    navigation.style.removeProperty("position");
+    navigation.style.removeProperty("top");
+    navigation.style.removeProperty("width");
+    navigation.style.removeProperty("z-index");
+
+}
+
+function escapePressed(e) {
+
+    e = e || window.event;
+    if (e.keyCode == 27) {
+
+        //search box
+        var search = document.getElementsByClassName("search")[0].getElementsByTagName("input")[0];
+
+        if(search == document.activeElement) {
+            alert("search");
+
+            search.value = "";
+            search.blur();
+        }
+
+        //login modal
+        var loginModal = document.getElementsByClassName("loginModal")[0];
+
+        if(loginModal.hasAttribute("style")) {
+            closeLoginDialog();
+        }
+
+    }
+
+}
+
+
+/* WINDOW AND DOCUMENTS LISTENERS   */
 window.addEventListener("load", function () {
 
     var anchor = document.getElementById("navigationAnchor");
@@ -12,38 +56,14 @@ window.addEventListener("load", function () {
         var offset = anchor.offsetTop;
 
         if(position > offset) {
-            console.log("je cez");
-
-            navigation.setAttribute("style", "position: fixed; top: 0px; width: 1200px; z-index: 9999;");
-
+            navFixed(navigation);
         } else {
-            console.log("ni cez");
-
-            navigation.style.removeProperty("position");
-            navigation.style.removeProperty("top");
-            navigation.style.removeProperty("width");
-            navigation.style.removeProperty("z-index");
-
+            removeNavFixed(navigation);
         }
-
     }
 
-    /*
-    // get vars
-    var labelEl = document.getElementsByClassName('searchLabel')[0].getElementsByTagName("i")[0];
+});
 
-    // register clicks and show search box
-    labelEl.addEventListener("click",function(){
-        alert("click");
-    });
+document.addEventListener("keydown", escapePressed, false);
 
-    // register clicks outisde search box and hide search box
-    document.addEventListener("click",function(e){
 
-    var clickedClass = e.target.classList;
-        if(clickedClass != "fa fa-search") {
-            alert("no click");
-        }
-    });*/
-
-})
