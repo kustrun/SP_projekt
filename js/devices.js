@@ -1,32 +1,20 @@
 /**
  * Created by Domen on 11. 11. 2016.
  */
-window.addEventListener("load", function () {
+function selectDevice(row) {
 
-    var loginButton = document.getElementById("navigationAnchor");
+    var index = row.rowIndex;
+    var devices = document.getElementsByClassName("device");
+    var ranking = document.getElementsByClassName("top10Devices")[0].getElementsByTagName("tr");
 
-    /*var navigation = document.getElementsByTagName("nav")[0];
-
-    window.onscroll =function(e) {
-
-        var position = window.pageYOffset;
-        var offset = anchor.offsetTop;
-
-        if(position > offset) {
-            console.log("je cez");
-
-            navigation.setAttribute("style", "position: fixed; top: 0px; width: 1200px; z-index: 9999;");
-
+    for(i=0; i<devices.length; i++) {
+        if(i != index) {
+            devices[i].style.display = "none";
+            ranking[i].className = "";
         } else {
-            console.log("ni cez");
-
-            navigation.style.removeProperty("position");
-            navigation.style.removeProperty("top");
-            navigation.style.removeProperty("width");
-            navigation.style.removeProperty("z-index");
-
+            devices[i].style.display = "inline";
+            ranking[i].className = "selectedDevice";
         }
+    }
 
-    }*/
-
-})
+}

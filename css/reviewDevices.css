@@ -24,7 +24,7 @@
 
 /*  CUSTOM REVIEW STYLING    */
 .review {
-    background-color: rgba(228, 64, 110, 0.7);
+    background-color: rgba(233, 204, 32, 0.7);
     margin: 30px;
     padding: 30px;
 }
@@ -58,8 +58,13 @@
 }
 
 /*  CUSTOM DEVICES STYLING    */
+.device + .device {
+    display: none;
+}
+
+
 .devices {
-    background-color: rgba(233, 204, 32, 0.7);
+    background-color: rgba(228, 64, 110, 0.7);
     margin: 30px;
     padding: 30px;
 }
@@ -68,6 +73,10 @@
     float: right;
     margin-left: 15px;
     height: 382px;
+}
+
+.top10Devices tr {
+    cursor: pointer;
 }
 
 .top10Devices h3 {

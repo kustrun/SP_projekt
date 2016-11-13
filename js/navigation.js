@@ -65,5 +65,3 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("keydown", escapePressed, false);
-
-

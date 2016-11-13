@@ -23,6 +23,7 @@
         <!-- SCRIPTS -->
         <script src="js/navigation.js"></script>
         <script src="js/loginRegister.js"></script>
+        <script src="js/devices.js"></script>
     </head>
 
     <body>
@@ -39,9 +40,9 @@
                 <div id="navigationAnchor"></div>
 
                 <ul>
-                    <li class="home"><a href="">HOME</a></li>
-                    <li class="news"><a href="">NEWS</a></li>
-                    <li class="reviews"><a href="">REVIEWS</a></li>
+                    <li class="home"><a href="http://gadgetfreak.db.si/">HOME</a></li>
+                    <li class="news"><a href="http://gadgetfreak.db.si/news/overview.html">NEWS</a></li>
+                    <li class="reviews"><a href="http://gadgetfreak.db.si/reviews/overview.html">REVIEWS</a></li>
                 </ul>
 
                 <div class="login">
@@ -390,65 +391,64 @@
              </section>
 
             <section class="devices">
-                <img src="images/iphone7.png">
 
                 <div class="top10Devices">
                     <table>
-                        <tr class="selectedDevice">
+                        <tr onclick="selectDevice(this)" class="selectedDevice">
                             <td class="deviceRang">1.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">2.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">3.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">4.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">5.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">6.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">7.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">8.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">9.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
                         </tr>
 
-                        <tr>
+                        <tr onclick="selectDevice(this)">
                             <td class="deviceRang">10.</td>
                             <td class="deviceName">Ime naprave</td>
                             <td class="devicePopularity">1500</td>
@@ -457,28 +457,225 @@
                     </table>
                 </div>
 
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 1</h2>
 
-                <h2>DEVICE NAME</h2>
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
 
-                <div class="devicesMeta">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <p>Domen</p>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                    <p>05. 11. 2016</p>
-                    <i class="fa fa-folder-o" aria-hidden="true"></i>
-                    <p>Novice</p>
-                    <i class="fa fa-comment-o" aria-hidden="true"></i>
-                    <p>3</p>
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <p>28227</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 2</h2>
 
-                <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
 
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
 
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 3</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 4</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 5</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 6</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 7</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 8</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 9</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
+
+                <div class="device">
+                    <img src="images/iphone7.png">
+                    <h2>DEVICE NAME 10</h2>
+
+                    <div class="devicesMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>Domen</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>05. 11. 2016</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+
+                    <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna. <a href="">VEČ</a></p>
+                </div>
             </section>
 
             <footer>
@@ -499,7 +696,7 @@
                         <h3>LATEST NEWS</h3>
 
                         <div class="theNews">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -517,7 +714,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -535,7 +732,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -553,7 +750,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -571,7 +768,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -593,7 +790,7 @@
                         <h3>LATEST REVIEWS</h3>
 
                         <div class="theReview">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -611,7 +808,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -629,7 +826,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -647,7 +844,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -665,7 +862,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -690,6 +887,7 @@
                 </div>
 
             </footer>
+
         </div>
     </body>
 </html>

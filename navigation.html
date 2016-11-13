@@ -1,0 +1,99 @@
+<nav>
+    <div id="navigationAnchor"></div>
+
+    <ul>
+        <li class="home"><a href="http://gadgetfreak.db.si/">HOME</a></li>
+        <li class="news"><a href="http://gadgetfreak.db.si/news/overview.html">NEWS</a></li>
+        <li class="reviews"><a href="http://gadgetfreak.db.si/reviews/overview.html">REVIEWS</a></li>
+    </ul>
+
+    <div class="login">
+
+        <i onclick="openLoginDialog()" class="fa fa-user" aria-hidden="true"></i>
+
+        <div class="loginModal">
+
+            <!-- LOGIN -->
+            <form class="loginDiv" action="#">
+                    <div class="loginModalIcon">
+                        <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="loginModalUserInput">
+                        <label>Username</label>
+                        <input type="text" placeholder="Enter username" name="username" required>
+
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password" name="password" required>
+
+                        <button type="submit">Login</button>
+                    </div>
+
+                    <div class="loginModalAction">
+                        <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                        <a href="#" onclick="showForgotPasswordDialog()">Forgot password?</a>
+                        <a href="#" onclick="showRegisterDialog()">Register</a>
+                    </div>
+            </form>
+
+                <!-- REGISTER -->
+            <form class="register" action="#">
+                <div class="loginModalIcon">
+                    <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </div>
+
+                <div class="loginModalUserInput">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email" name="email" required>
+
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter username" name="username" required>
+
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" name="password" required>
+
+                    <button type="submit">Register</button>
+                </div>
+
+                <div class="loginModalAction">
+                    <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                    <a href="#" onclick="showLoginDivDialog()">Login</a>
+                </div>
+            </form>
+
+            <!-- FORGOT PASSWORD -->
+            <form class="forgotPassword" action="#">
+                <div class="loginModalIcon">
+                    <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                </div>
+
+                <div class="loginModalUserInput">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email" name="email" required>
+
+                    <button type="submit">Reset password</button>
+                </div>
+
+                <div class="loginModalAction">
+                    <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                    <a href="#" onclick="showLoginDivDialog()">Login</a>
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+
+    <div class="search">
+        <form action="#" method="post">
+            <input type="text" name="search" placeholder="Search..." />
+        </form>
+    </div>
+</nav>
