@@ -29,6 +29,17 @@
     padding: 30px;
 }
 
+
+.device a, .review a {
+    text-decoration: none;
+    color: black;
+}
+
+.device a:hover, .review a:hover {
+    text-decoration: underline;
+    color: #444444;
+}
+
 .specifications {
     float: right;
     width: 30%;
@@ -61,7 +72,6 @@
 .device + .device {
     display: none;
 }
-
 
 .devices {
     background-color: rgba(228, 64, 110, 0.7);

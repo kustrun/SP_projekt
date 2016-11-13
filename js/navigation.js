@@ -26,8 +26,6 @@ function escapePressed(e) {
         var search = document.getElementsByClassName("search")[0].getElementsByTagName("input")[0];
 
         if(search == document.activeElement) {
-            alert("search");
-
             search.value = "";
             search.blur();
         }
