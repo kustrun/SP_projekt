@@ -68,6 +68,11 @@
     text-align: center;
 }
 
+.specInfo input {
+    width: 100px;
+    margin-right: 10px;
+}
+
 /*  CUSTOM DEVICES STYLING    */
 .device + .device {
     display: none;
@@ -77,6 +82,11 @@
     background-color: rgba(228, 64, 110, 0.7);
     margin: 30px;
     padding: 30px;
+}
+
+.editNewsMeta, .editReviewMeta {
+    float: right;
+    font-size: 25px;
 }
 
 .top10Devices {
