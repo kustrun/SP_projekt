@@ -1,0 +1,31 @@
+@media only screen and (min-width: 1200px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        width: 1200px;
+        margin: auto;
+
+        background: url("../../images/background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .content {
+        background-color: #f5f5f5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Oswald', sans-serif;;
+    }
+
+    a, p, table, form, input, button, textarea {
+        font-family: 'Raleway', sans-serif;
+    }
+
+}
