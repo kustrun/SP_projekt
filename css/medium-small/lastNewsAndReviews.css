@@ -1,5 +1,6 @@
 @media only screen
-and (min-width: 1224px) {
+and (min-width: 768px)
+and (max-width: 1023px) {
     .lastNewsAndReviews {
         background-color: #2d2d2d;
         color: #f2f2f2;
@@ -20,9 +21,13 @@ and (min-width: 1224px) {
     }
 
     .newsReviews {
-        width: 372px;
+        width: 216px;
         display: inline-block;
         margin-bottom: 30px;
+    }
+
+    .newsReviews img {
+        width: 216px;
     }
 
     .newsReviews:first-of-type {

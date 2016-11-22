@@ -1,5 +1,6 @@
 @media only screen
-and (min-width: 1224px) {
+and (min-width: 768px)
+and (max-width: 1023px) {
     .exposedNews {
         display: inline-block;
     }
@@ -31,30 +32,30 @@ and (min-width: 1224px) {
     }
 
     .bigNewsImage img {
-        width: 609px;
+        width: 381px;
     }
 
     .smallNewsImage img {
-        width: 404px;
+        width: 252px;
     }
 
     /*news metadata*/
     .bigNewsInfo, .smallNewsInfo {
         width: 100%;
         position: absolute;
-        top: 280px;
+        top: 160px;
         text-align: center;
         color: white;
     }
 
     .bigNewsInfo h2, .smallNewsInfo h3 {
-        font-size: 34px;
+        font-size: 28px;
         font-weight: bolder;
         margin-bottom: 10px;
     }
 
     .bigNewsInfo p, .smallNewsInfo p {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
     }
 
@@ -69,14 +70,14 @@ and (min-width: 1224px) {
 
     /*small news metadata*/
     .smallNewsInfo {
-        top: 160px;
+        top: 80px;
     }
 
     .smallNewsInfo h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .smallNewsInfo p {
-        font-size: 12px;
+        font-size: 10px;
     }
 }

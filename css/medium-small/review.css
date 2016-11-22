@@ -1,32 +1,113 @@
-@media only screen and (min-width: 1020px) and (max-width: 1199px) {
-    /*  SINGLE NEWS */
-    .singleNews, .singleReview {
-        margin: 30px;
-        padding: 30px;
-        background-color: rgba(228, 64, 110, 0.7);
-    }
-
-    .singleNews img, .singleReview img {
+@media only screen
+and (min-width: 768px)
+and (max-width: 1023px) {
+    .review img {
         float: left;
         margin-right: 30px;
         margin-bottom: 20px;
     }
 
-    .singleNews h2, .singleReview h2 {
+    .review h2 {
         margin-bottom: 10px;
     }
 
-    .singleNews p, .singleReview p {
+    .review p {
         margin-top: 5px;
         margin-bottom: 10px;
     }
 
-    .singleNewsMeta, .singleReviewMeta {
+    .reviewMeta {
         font-size: 14px;
         margin-bottom: 15px;
     }
 
-    .singleNewsMeta *, .singleReviewMeta * {
+    .reviewMeta * {
+        display: inline-block;
+    }
+
+    /*  CUSTOM REVIEW STYLING    */
+    .review {
+        background-color: rgba(233, 204, 32, 0.7);
+        margin: 30px;
+        padding: 30px;
+    }
+
+    .review a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .review a:hover {
+        text-decoration: underline;
+        color: #444444;
+    }
+
+    .specifications {
+        float: right;
+        width: 35%;
+        height: 344px;
+    }
+
+    .specifications h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+
+    .specInfo {
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .specInfo i, .bigger {
+        font-size: 28px;
+    }
+
+    .specInfoIcon {
+        width: 100px;
+        text-align: center;
+    }
+
+    .specInfo input {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .editReviewMeta {
+        float: right;
+        font-size: 25px;
+    }
+
+    /* EDIT REVIEW  */
+    .singleReview {
+        margin: 30px;
+        padding: 30px;
+        background-color: rgba(228, 64, 110, 0.7);
+    }
+
+    .singleReview img {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .singleReview h2 {
+        margin-bottom: 10px;
+    }
+
+    .singleReview p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .singleReviewMeta {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .singleReviewMeta * {
         display: inline-block;
     }
 
@@ -121,8 +202,8 @@
         margin-bottom: 10px;
     }
 
-    /*  EDIT NEWS   */
-    .singleNews input, .singleNews textarea, .singleReview input, .singleReview textarea, .authorPickImage input, .author textarea {
+    /*  EDIT REVIEW   */
+    .singleReview input, .singleReview textarea, .authorPickImage input, .author textarea {
         line-height: 30px;
         color: white;
         font-size: 14px;
@@ -132,12 +213,12 @@
         padding-left: 10px;
     }
 
-    .singleNewsPickImage, .singleReviewPickImage, .authorPickImage {
+    .singleReviewPickImage, .authorPickImage {
         float: left;
         width: 300px;
     }
 
-    .singleNewsPickImage img, .singleReviewPickImage img, .authorPickImage img {
+    .singleReviewPickImage img, .authorPickImage img {
         float: none;
         display: block;
         margin: auto;
@@ -155,13 +236,14 @@
         padding-bottom: 7px;
     }
 
-    .singleNewsPickTitleDate, .singleReviewPickTitleDate {
+    .singleReviewPickTitleDate {
         margin-top: 20px;
         margin-bottom: 10px;
     }
 
     .pickTitle {
-        width: 300px;
+        width: 180px;
+        margin-top: 20px;
         margin-left: 10px;
     }
 
@@ -171,24 +253,14 @@
         margin-top: 10px;
     }
 
-    .singleNewsPickDescription {
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
-
     .singleReviewPickDescription {
         margin-top: 40px;
         margin-bottom: 20px;
     }
 
-    .pickDescription {
-        width: 72%;
-        height: 150px;
-    }
-
     .singleReviewPickDescription textarea {
-        width: 42%;
-        height: 250px;
+        width: 100%;
+        height: 150px;
     }
 
     .pickText {
@@ -201,7 +273,19 @@
     }
 
     .pickUserDescription {
-        width: 71%;
+        width: 52%;
         height: 280px;
     }
+
+
+    /* CUSTOM SPECIFICATIONS FOR EDITING */
+    .singleReview .specifications {
+        display: inline-block;
+        width: 50%;
+        height: 500px;
+    }
+
 }
+
+
+

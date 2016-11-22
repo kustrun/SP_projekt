@@ -1,7 +1,8 @@
 @media only screen
-and (min-width: 1224px) {
+and (min-width: 1024px)
+and (max-width: 1223px) {
     nav {
-        width: 1224px;
+        width: 1020px;
         height: 52px;
         background-color: #1b1b1b;
     }

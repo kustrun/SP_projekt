@@ -4,7 +4,7 @@
 
 function navFixed(navigation) {
 
-    navigation.setAttribute("style", "position: fixed; top: 0px; width: 1200px; z-index: 1;");
+    navigation.setAttribute("style", "position: fixed; top: 0px; z-index: 1;");
 
 }
 

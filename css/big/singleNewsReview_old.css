@@ -1,4 +1,5 @@
-@media only screen and (min-width: 1200px) {
+@media only screen
+and (min-width: 1224px) {
     /*  SINGLE NEWS */
     .singleNews, .singleReview {
         margin: 30px;

@@ -1,12 +1,15 @@
-@media only screen and (min-width: 1020px) and (max-width: 1199px) {
+@media only screen
+and (min-width: 768px)
+and (max-width: 1023px) {
     nav {
+        width: 768px;
         height: 52px;
         background-color: #1b1b1b;
     }
 
     /*  NAVIGATION  */
     nav ul {
-        position: absolute;
+        position: relative;
         left: 50%;
         -ms-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
@@ -216,7 +219,7 @@
     }
 
     .search input[type=text]:focus {
-        width: 200px;
+        width: 100px;
         background-color: #6a6a6a;
         cursor: text;
     }

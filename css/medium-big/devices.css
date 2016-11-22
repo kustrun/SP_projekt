@@ -1,4 +1,6 @@
-@media only screen and (min-width: 1020px) and (max-width: 1199px) {
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1223px) {
 
     .devices img {
         float: left;
@@ -95,39 +97,34 @@
 
     /* EDIT DATA    */
     /*  SINGLE NEWS */
-    .singleNews, .singleReview {
+    .singleNews {
         margin: 30px;
         padding: 30px;
         background-color: rgba(228, 64, 110, 0.7);
     }
 
-    .singleNews img, .singleReview img {
+    .singleNews img {
         float: left;
         margin-right: 30px;
         margin-bottom: 20px;
     }
 
-    .singleNews h2, .singleReview h2 {
+    .singleNews h2 {
         margin-bottom: 10px;
     }
 
-    .singleNews p, .singleReview p {
+    .singleNews p {
         margin-top: 5px;
         margin-bottom: 10px;
     }
 
-    .singleNewsMeta, .singleReviewMeta {
+    .singleNewsMeta {
         font-size: 14px;
         margin-bottom: 15px;
     }
 
-    .singleNewsMeta *, .singleReviewMeta * {
+    .singleNewsMeta * {
         display: inline-block;
-    }
-
-    /*  SINGLE REVIEWS  */
-    .singleReview {
-        background-color: rgba(233, 204, 32, 0.7);
     }
 
     /*  AUTHOR    */
@@ -215,5 +212,81 @@
     .singleComment h4 {
         margin-bottom: 10px;
     }
+
+    /*  EDIT NEWS   */
+    .singleNews input, .singleNews textarea, .authorPickImage input, .author textarea {
+        line-height: 30px;
+        color: white;
+        font-size: 14px;
+        border: none;
+        box-sizing: border-box;
+        background-color: #6a6a6a;
+        padding-left: 10px;
+    }
+
+    .singleNewsPickImage, .authorPickImage {
+        float: left;
+        width: 300px;
+    }
+
+    .singleNewsPickImage img, .authorPickImage img {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .authorPickImage {
+        margin-top: 80px;
+    }
+
+    .pickImage {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 290px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .singleNewsPickTitleDate {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .pickTitle {
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .pickDate {
+        width: 180px;
+        margin-left: 49px;
+        margin-top: 10px;
+    }
+
+    .singleNewsPickDescription {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .pickDescription {
+        width: 66%;
+        height: 150px;
+    }
+
+    .pickText {
+        width: 100%;
+        height: 100%;
+    }
+
+    .authorPickImage input {
+        width: 280px;
+    }
+
+    .pickUserDescription {
+        width: 66%;
+        height: 280px;
+    }
 }
+
+
 

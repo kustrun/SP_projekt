@@ -1,5 +1,6 @@
 @media only screen
-and (min-width: 1224px) {
+and (min-width: 768px)
+and (max-width: 1023px) {
 
     .devices img {
         float: left;
@@ -54,7 +55,7 @@ and (min-width: 1224px) {
     .top10Devices {
         float: right;
         margin-left: 15px;
-        height: 382px;
+        height: 360px;
     }
 
     .top10Devices tr {
@@ -62,7 +63,7 @@ and (min-width: 1224px) {
     }
 
     .top10Devices h3 {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -70,9 +71,9 @@ and (min-width: 1224px) {
     }
 
     .top10Devices table {
-        font-size: 25px;
+        font-size: 20px;
         margin: auto;
-        margin-top: -7px;
+        margin-top: 10px;
         border-spacing: 0 10px;
         text-align: center;
     }
@@ -83,11 +84,11 @@ and (min-width: 1224px) {
     }
 
     .deviceRang {
-        width: 40px;
+        width: 30px;
     }
 
     .deviceName {
-        width: 200px;
+        width: 150px;
     }
 
     .devicePopularity {
@@ -252,7 +253,7 @@ and (min-width: 1224px) {
     }
 
     .pickTitle {
-        width: 300px;
+        width: 250px;
         margin-left: 10px;
     }
 
@@ -264,12 +265,12 @@ and (min-width: 1224px) {
 
     .singleNewsPickDescription {
         margin-top: 40px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     .pickDescription {
-        width: 72%;
-        height: 150px;
+        width: 53%;
+        height: 195px;
     }
 
     .pickText {
@@ -282,8 +283,10 @@ and (min-width: 1224px) {
     }
 
     .pickUserDescription {
-        width: 71%;
+        width: 52%;
         height: 280px;
     }
 }
+
+
 

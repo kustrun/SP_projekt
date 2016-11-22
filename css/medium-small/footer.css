@@ -1,4 +1,6 @@
-@media only screen and (min-width: 1020px) and (max-width: 1199px) {
+@media only screen
+and (min-width: 768px)
+and (max-width: 1023px) {
 
     footer {
         border-top: 20px solid #333333;
@@ -11,8 +13,8 @@
     }
 
     .about, .top5news, .top5reviews {
-        width: 338px;
-        height: 594px;
+        width: 254px;
+        height: 677px;
         float: left;
         position: relative;
         background-color: #272727;
@@ -55,15 +57,11 @@
     }
 
     .theNews, .theReview {
-        height: 90px;
-    }
-
-    .theNews img, .theNewsInfo, .theReview img, .theReviewInfo {
-        float: left;
+        text-align: center;
+        height: 110px;
     }
 
     .theNews img, .theReview img {
-        margin-left: 20px;
         width: 60px;
     }
 
@@ -73,7 +71,6 @@
 
     .theNewsInfo, .theReviewInfo {
         margin-top: 10px;
-        margin-left: 20px;
     }
 
     .theNewsMeta, .theReviewMeta {
