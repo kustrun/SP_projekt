@@ -1,8 +1,9 @@
-<!DOCTPYE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
 
         <meta charset="UTF-8">
+        <title>Gadget freak</title>
 
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
@@ -41,6 +42,16 @@
         <link rel="stylesheet" href="css/medium-small/lastNewsAndReviews.css">
         <link rel="stylesheet" href="css/medium-small/footer.css">
 
+        <link rel="stylesheet" href="css/small/general.css">
+        <link rel="stylesheet" href="css/small/logo.css">
+        <link rel="stylesheet" href="css/small/navigation.css">
+        <link rel="stylesheet" href="css/small/trending.css">
+        <link rel="stylesheet" href="css/small/exposedNews.css">
+        <link rel="stylesheet" href="css/small/review.css">
+        <link rel="stylesheet" href="css/small/devices.css">
+        <link rel="stylesheet" href="css/small/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="css/small/footer.css">
+
         <!-- SCRIPTS -->
         <script src="js/navigation.js"></script>
         <script src="js/loginRegister.js"></script>
@@ -66,94 +77,96 @@
                     <li class="reviews"><a href="http://gadgetfreak.db.si/reviews/overview.html">REVIEWS</a></li>
                 </ul>
 
-                <div class="login">
+                <div class="loginAndSearchSmall">
+                    <div class="login">
 
-                    <i onclick="openLoginDialog()" class="fa fa-user" aria-hidden="true"></i>
+                        <i onclick="openLoginDialog()" class="fa fa-user" aria-hidden="true"></i>
 
-                    <div class="loginModal">
+                        <div class="loginModal">
 
-                        <!-- LOGIN -->
-                        <form class="loginDiv" action="#">
+                            <!-- LOGIN -->
+                            <form class="loginDiv" action="#">
+                                    <div class="loginModalIcon">
+                                        <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    </div>
+
+                                    <div class="loginModalUserInput">
+                                        <label>Username</label>
+                                        <input type="text" placeholder="Enter username" name="username" required>
+
+                                        <label>Password</label>
+                                        <input type="password" placeholder="Enter password" name="password" required>
+
+                                        <button type="submit">Login</button>
+                                    </div>
+
+                                    <div class="loginModalAction">
+                                        <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                                        <a href="#" onclick="showForgotPasswordDialog()">Forgot password?</a>
+                                        <a href="#" onclick="showRegisterDialog()">Register</a>
+                                    </div>
+                            </form>
+
+                                <!-- REGISTER -->
+                            <form class="register" action="#">
                                 <div class="loginModalIcon">
                                     <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
 
-                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    <i class="fa fa-user-plus" aria-hidden="true"></i>
                                 </div>
 
                                 <div class="loginModalUserInput">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Enter email" name="email" required>
+
                                     <label>Username</label>
                                     <input type="text" placeholder="Enter username" name="username" required>
 
                                     <label>Password</label>
                                     <input type="password" placeholder="Enter password" name="password" required>
 
-                                    <button type="submit">Login</button>
+                                    <button type="submit">Register</button>
                                 </div>
 
                                 <div class="loginModalAction">
                                     <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
-                                    <a href="#" onclick="showForgotPasswordDialog()">Forgot password?</a>
-                                    <a href="#" onclick="showRegisterDialog()">Register</a>
+                                    <a href="#" onclick="showLoginDivDialog()">Login</a>
                                 </div>
-                        </form>
+                            </form>
 
-                            <!-- REGISTER -->
-                        <form class="register" action="#">
-                            <div class="loginModalIcon">
-                                <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+                            <!-- FORGOT PASSWORD -->
+                            <form class="forgotPassword" action="#">
+                                <div class="loginModalIcon">
+                                    <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
 
-                                <i class="fa fa-user-plus" aria-hidden="true"></i>
-                            </div>
+                                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                                </div>
 
-                            <div class="loginModalUserInput">
-                                <label>Email</label>
-                                <input type="email" placeholder="Enter email" name="email" required>
+                                <div class="loginModalUserInput">
+                                    <label>Email</label>
+                                    <input type="email" placeholder="Enter email" name="email" required>
 
-                                <label>Username</label>
-                                <input type="text" placeholder="Enter username" name="username" required>
+                                    <button type="submit">Reset password</button>
+                                </div>
 
-                                <label>Password</label>
-                                <input type="password" placeholder="Enter password" name="password" required>
+                                <div class="loginModalAction">
+                                    <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                                    <a href="#" onclick="showLoginDivDialog()">Login</a>
+                                </div>
+                            </form>
 
-                                <button type="submit">Register</button>
-                            </div>
+                        </div>
 
-                            <div class="loginModalAction">
-                                <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
-                                <a href="#" onclick="showLoginDivDialog()">Login</a>
-                            </div>
-                        </form>
-
-                        <!-- FORGOT PASSWORD -->
-                        <form class="forgotPassword" action="#">
-                            <div class="loginModalIcon">
-                                <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
-
-                                <i class="fa fa-user-secret" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="loginModalUserInput">
-                                <label>Email</label>
-                                <input type="email" placeholder="Enter email" name="email" required>
-
-                                <button type="submit">Reset password</button>
-                            </div>
-
-                            <div class="loginModalAction">
-                                <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
-                                <a href="#" onclick="showLoginDivDialog()">Login</a>
-                            </div>
-                        </form>
 
                     </div>
 
-
-                </div>
-
-                <div class="search">
-                    <form action="#" method="post">
-                        <input type="text" name="search" placeholder="Search..." />
-                    </form>
+                    <div class="search">
+                        <form action="#" method="post">
+                            <input type="text" name="search" placeholder="Search..." />
+                        </form>
+                    </div>
                 </div>
             </nav>
 
@@ -166,7 +179,7 @@
             <section class="exposedNews">
                 <div class="bigNews">
                     <div class="bigNewsImage">
-                        <img src="images/test.jpg">
+                        <img src="images/test.jpg" alt="bigNewsPic">
                     </div>
 
                     <div class="bigNewsInfo">
@@ -189,7 +202,7 @@
 
                 <div class="bigNews">
                     <div class="bigNewsImage">
-                        <img src="images/velika_naslovna.jpg">
+                        <img src="images/velika_naslovna.jpg" alt="bigNewsPic">
                     </div>
 
                     <div class="bigNewsInfo">
@@ -212,7 +225,7 @@
 
                 <div class="smallNews">
                     <div class="smallNewsImage">
-                        <img src="images/test_mala.jpg">
+                        <img src="images/test_mala.jpg" alt="smallNewsPic">
                     </div>
 
                     <div class="smallNewsInfo">
@@ -235,7 +248,7 @@
 
                 <div class="smallNews">
                     <div class="smallNewsImage">
-                        <img src="images/mala_naslovna.jpg">
+                        <img src="images/mala_naslovna.jpg" alt="smallNewsPic">
                     </div>
 
                     <div class="smallNewsInfo">
@@ -258,7 +271,7 @@
 
                 <div class="smallNews">
                     <div class="smallNewsImage">
-                        <img src="images/mala_naslovna.jpg">
+                        <img src="images/mala_naslovna.jpg" alt="smallNewsPic">
                     </div>
 
                     <div class="smallNewsInfo">
@@ -281,7 +294,7 @@
             </section>
 
             <section class="review">
-                <img src="images/iphone7.png">
+                <img src="images/iphone7.png" alt="reviewPic">
 
                 <div class="specifications">
                     <h3>Specifications</h3>
@@ -347,7 +360,7 @@
                 <h2>NEWS AND TESTINGS</h2>
 
                 <div class="newsReviews">
-                    <img class="newsImg" src="images/newsTesting.jpg" />
+                    <img class="newsImg" src="images/newsTesting.jpg" alt="newsPic" />
                     <h3>Title</h3>
 
                     <div class="newsReviewsMeta">
@@ -368,7 +381,7 @@
                 </div>
 
                 <div class="newsReviews">
-                    <img class="testingImg" src="images/newsTesting.jpg" />
+                    <img class="testingImg" src="images/newsTesting.jpg" alt="newsPic" />
                     <h3>Title</h3>
 
                     <div class="newsReviewsMeta">
@@ -389,7 +402,7 @@
                 </div>
 
                 <div class="newsReviews">
-                    <img src="images/newsTesting.jpg" />
+                    <img src="images/newsTesting.jpg" alt="newsPic" />
                     <h3>Title</h3>
 
                     <div class="newsReviewsMeta">
@@ -479,7 +492,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 1</h2>
 
                     <div class="devicesMeta">
@@ -501,7 +514,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 2</h2>
 
                     <div class="devicesMeta">
@@ -523,7 +536,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 3</h2>
 
                     <div class="devicesMeta">
@@ -545,7 +558,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 4</h2>
 
                     <div class="devicesMeta">
@@ -567,7 +580,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 5</h2>
 
                     <div class="devicesMeta">
@@ -589,7 +602,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 6</h2>
 
                     <div class="devicesMeta">
@@ -611,7 +624,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 7</h2>
 
                     <div class="devicesMeta">
@@ -633,7 +646,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 8</h2>
 
                     <div class="devicesMeta">
@@ -655,7 +668,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 9</h2>
 
                     <div class="devicesMeta">
@@ -677,7 +690,7 @@
                 </div>
 
                 <div class="device">
-                    <img src="images/iphone7.png">
+                    <img src="images/iphone7.png" alt="newsPic">
                     <h2>DEVICE NAME 10</h2>
 
                     <div class="devicesMeta">
@@ -701,23 +714,12 @@
 
             <footer>
                 <div class="aboutTop5">
-                    <section class="about">
-                        <div class="logo">
-                            <h1>GADGET FREAK</h1>
-                            <h5>GADGET NEWS AND REVIEWS</h5>
-                        </div>
-
-                        <p>Spletna stran GadgetFreak je projekt izdelan v okviru predmeta Spletno programiranje</p>
-
-                        <h3>NALOGA:</h3>
-                        <p>Vaša prijateljica Rozina ima idejo kako združiti vse ljubitelje takšnih in drugačnih elektronskih naprav, po domače gadgetov. Rada bi naredila neke sorte družbeno omrežje, kjer si bodo lahko lastniki različnih naprav izmenjali izkušnje. Rozina ima samo eno težavo... ne ve prav nič o spletnem programiranju.</p>
-                    </section>
 
                     <section class="top5news">
                         <h3>LATEST NEWS</h3>
 
                         <div class="theNews">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="newsPic">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -735,7 +737,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="newsPic">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -753,7 +755,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="newsPic">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -771,7 +773,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="newsPic">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -789,7 +791,7 @@
                         </div>
 
                         <div class="theNews">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="newsPic">
 
                             <div class="theNewsInfo">
                                 <h4>News title</h4>
@@ -811,7 +813,7 @@
                         <h3>LATEST REVIEWS</h3>
 
                         <div class="theReview">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="reviewPic">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -829,7 +831,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="reviewPic">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -847,7 +849,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="reviewPic">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -865,7 +867,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="reviewPic">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -883,7 +885,7 @@
                         </div>
 
                         <div class="theReview">
-                            <img src="http://gadgetfreak.db.si/images/the_news.jpg">
+                            <img src="http://gadgetfreak.db.si/images/the_news.jpg" alt="reviewPic">
 
                             <div class="theReviewInfo">
                                 <h4>Review title</h4>
@@ -900,6 +902,18 @@
                             </div>
                         </div>
 
+                    </section>
+
+                    <section class="about">
+                        <div class="logo">
+                            <h1>GADGET FREAK</h1>
+                            <h5>GADGET NEWS AND REVIEWS</h5>
+                        </div>
+
+                        <p>Spletna stran GadgetFreak je projekt izdelan v okviru predmeta Spletno programiranje</p>
+
+                        <h3>NALOGA:</h3>
+                        <p>Vaša prijateljica Rozina ima idejo kako združiti vse ljubitelje takšnih in drugačnih elektronskih naprav, po domače gadgetov. Rada bi naredila neke sorte družbeno omrežje, kjer si bodo lahko lastniki različnih naprav izmenjali izkušnje. Rozina ima samo eno težavo... ne ve prav nič o spletnem programiranju.</p>
                     </section>
                 </div>
 

@@ -20,7 +20,7 @@ and (max-width: 1223px) {
         background-color: #272727;
     }
 
-    .about, .top5news {
+    .top5news, .top5reviews {
         border-right: 3px solid #333333;
     }
 

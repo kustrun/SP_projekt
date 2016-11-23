@@ -139,7 +139,7 @@ and (max-width: 1023px) {
 
     .loginModalUserInput input {
         margin-left: 15px;
-        width: 570px;
+        width: 88.4%;
         padding: 10px 20px;
         font-size: 16px;
         border: none;
@@ -222,6 +222,10 @@ and (max-width: 1023px) {
         width: 100px;
         background-color: #6a6a6a;
         cursor: text;
+    }
+
+    .loginAndSearchSmall {
+        float: right;
     }
 }
 

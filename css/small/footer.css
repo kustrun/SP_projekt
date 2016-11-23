@@ -1,6 +1,5 @@
 @media only screen
-and (min-width: 768px)
-and (max-width: 1023px) {
+and (max-width: 767px) {
 
     footer {
         border-top: 20px solid #333333;
@@ -13,15 +12,24 @@ and (max-width: 1023px) {
     }
 
     .about, .top5news, .top5reviews {
-        width: 254px;
+        width: 100%;
         height: 677px;
         float: left;
         position: relative;
         background-color: #272727;
     }
 
-    .top5news, .top5reviews {
-        border-right: 3px solid #333333;
+    .about {
+        border-top: 3px solid #333333;
+        height: 460px;
+    }
+
+    .top5news {
+        width: 50%;
+    }
+
+    .top5reviews {
+        width: 50%;
     }
 
     /*  ABOUT   */

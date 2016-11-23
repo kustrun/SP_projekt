@@ -1,0 +1,40 @@
+@media only screen
+and (max-width: 767px) {
+    .trending {
+        width: 100% - 30px;
+        height: 52px;
+        background-color: #dedede;
+        padding-left: 30px;
+        margin-bottom: 5px;
+    }
+
+    .trending * {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 52px;
+    }
+
+    .trending h4 {
+        color: #424242;
+        font-weight: 500;
+    }
+
+    .trending i {
+        font-weight: 500;
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #424242;
+    }
+
+    .trending a {
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        color: #999d9d;
+        margin-top: 2px;
+    }
+
+    .trending a:hover {
+        text-decoration: underline;
+    }
+}
