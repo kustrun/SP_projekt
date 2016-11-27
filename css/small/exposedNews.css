@@ -38,7 +38,7 @@ and (max-width: 767px) {
     .bigNewsInfo, .smallNewsInfo {
         width: 100%;
         position: absolute;
-        top: 350px;
+        top: 70%;
         text-align: center;
         color: white;
     }
