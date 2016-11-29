@@ -14,7 +14,7 @@
 </ul>
 
 <h4>Ciljna publika</h4>
-<p>Ciljna publika so osebe, ki nameravajo v bližnji prihodnosti kupiti nov mobilni telefon in se o njem predhodno pozanimajo ali osebe, ki jih zanima tehnika.</p>
+<p>Ciljna publika so osebe z osebnimi računalniki ali laptopi, ki nameravajo v bližnji prihodnosti kupiti nov mobilni telefon in se o njem predhodno pozanimajo ali osebe, ki jih zanima tehnika.</p>
 
 <h4>Poročilo o težavah v različnih brskalnikih</h4>
 <p>Spletna stran deluje v brskalnikih: Google Chrome, Mozila Firefox in Safari. Ne deluje v spletnem brskalniku Internet Explorer</p>
