@@ -1,0 +1,32 @@
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1223px) {
+    .users h3 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .editUsers {
+        margin: auto;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+
+    .editUsers th {
+        padding: 5px;
+        text-align: left;
+        background-color: #e9cc20;
+    }
+
+    .editUsers td {
+        padding: 5px;
+        width: 150px;
+    }
+
+    .editUsers td:last-of-type {
+        width: 60px;
+        text-align: right;
+    }
+}

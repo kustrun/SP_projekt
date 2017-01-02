@@ -1,0 +1,133 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="../../static/css/font-awesome/css/font-awesome.min.css">
+
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="../../static/css/big/general.css">
+        <link rel="stylesheet" href="../../static/css/big/logo.css">
+        <link rel="stylesheet" href="../../static/css/big/navigation.css">
+        <link rel="stylesheet" href="../../static/css/big/trending.css">
+        <link rel="stylesheet" href="../../static/css/big/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/big/devices.css">
+        <link rel="stylesheet" href="../../static/css/big/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/big/pagination.css">
+        <link rel="stylesheet" href="../../static/css/big/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/medium-big/general.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/logo.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/navigation.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/trending.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/devices.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/pagination.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/medium-small/general.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/logo.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/navigation.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/trending.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/devices.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/pagination.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/small/general.css">
+        <link rel="stylesheet" href="../../static/css/small/logo.css">
+        <link rel="stylesheet" href="../../static/css/small/navigation.css">
+        <link rel="stylesheet" href="../../static/css/small/trending.css">
+        <link rel="stylesheet" href="../../static/css/small/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/small/devices.css">
+        <link rel="stylesheet" href="../../static/css/small/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/small/pagination.css">
+        <link rel="stylesheet" href="../../static/css/small/footer.css">
+
+        <!-- SCRIPTS -->
+        <script src="{% static 'js/navigation.js' %}"></script>
+        <script src="{% static 'js/loginRegister.js' %}"></script>
+        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    </head>
+
+    <body>
+        <div class="content">
+
+            {% include 'header.html' %}
+            {% include 'navigation.html' %}
+            {% include 'trending.html' %}
+
+
+            {% for novica in novice %}
+                <section class="devices">
+                    <div class="device">
+
+                        {% if user.is_authenticated %}
+                            {% for group in request.user.groups.all %}
+                                {% if group.name == "Administrator" or group.name == "Urednik" %}
+                                    <div class="editNewsMeta">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="../editor/editNews.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+
+                        <img src="{% static 'images' %}/{{ novica.nvcSlika }}" alt="devicePic">
+                        <a href="news.html"><h2>{{ novica.nvcNaslov }}</h2></a>
+
+                        <div class="devicesMeta">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>{{ novica.nvcAvtor.upr.username }}</p>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>{{ novica.nvcDatum|date:"d.m.Y" }}</p>
+                            <i class="fa fa-folder-o" aria-hidden="true"></i>
+                            <p>Novice</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>3</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>28227</p>
+                        </div>
+
+                        <p>{{ novica.nvcOpis }}</p>
+
+                        <p>{{ novica.nvcBesedilo|truncatechars:2048 }} <a href="">VEČ</a></p>
+                    </div>
+                </section>
+            {% endfor %}
+
+
+            <section class="pagination">
+                <ul>
+
+                    {% if novice.has_previous %}
+                        <li><a href="?page={{ novice.previous_page_number }}">«</a></li>
+                    {% endif %}
+
+                    {% for i in stStrani %}
+                        {% if forloop.counter == trenutnaStran %}
+                            <li><a class="active" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                        {% else %}
+                            <li><a href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if novice.has_next %}
+                        <li><a href="?page={{ novice.next_page_number }}">»</a></li>
+                    {% endif %}
+
+                </ul>
+            </section>
+
+            {% include 'footer.html' %}
+
+        </div>
+    </body>
+</html>

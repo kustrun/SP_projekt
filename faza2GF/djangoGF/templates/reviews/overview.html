@@ -1,0 +1,172 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="../../static/css/font-awesome/css/font-awesome.min.css">
+
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="../../static/css/big/general.css">
+        <link rel="stylesheet" href="../../static/css/big/logo.css">
+        <link rel="stylesheet" href="../../static/css/big/navigation.css">
+        <link rel="stylesheet" href="../../static/css/big/trending.css">
+        <link rel="stylesheet" href="../../static/css/big/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/big/review.css">
+        <link rel="stylesheet" href="../../static/css/big/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/big/pagination.css">
+        <link rel="stylesheet" href="../../static/css/big/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/medium-big/general.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/logo.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/navigation.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/trending.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/review.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/pagination.css">
+        <link rel="stylesheet" href="../../static/css/medium-big/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/medium-small/general.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/logo.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/navigation.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/trending.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/review.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/pagination.css">
+        <link rel="stylesheet" href="../../static/css/medium-small/footer.css">
+
+        <link rel="stylesheet" href="../../static/css/small/general.css">
+        <link rel="stylesheet" href="../../static/css/small/logo.css">
+        <link rel="stylesheet" href="../../static/css/small/navigation.css">
+        <link rel="stylesheet" href="../../static/css/small/trending.css">
+        <link rel="stylesheet" href="../../static/css/small/exposedNews.css">
+        <link rel="stylesheet" href="../../static/css/small/review.css">
+        <link rel="stylesheet" href="../../static/css/small/lastNewsAndReviews.css">
+        <link rel="stylesheet" href="../../static/css/small/pagination.css">
+        <link rel="stylesheet" href="../../static/css/small/footer.css">
+
+
+        <!-- SCRIPTS -->
+        <script src="../../static/js/navigation.js"></script>
+        <script src="../../static/js/loginRegister.js"></script>
+        <script src="../../static/js/devices.js"></script>
+    </head>
+
+    <body>
+        <div class="content">
+
+            {% include 'header.html' %}
+            {% include 'navigation.html' %}
+            {% include 'trending.html' %}
+
+
+            {% for testiranje in testiranja %}
+
+                <section class="review">
+                    <img src="{% static 'images' %}/{{ testiranje.tstSlika }}" alt="devicePic">
+
+                    <div class="specifications">
+
+
+                        {% if user.is_authenticated %}
+                            {% for group in request.user.groups.all %}
+                                {% if group.name == "Administrator" or group.name == "Urednik" %}
+                                    <div class="editNewsMeta">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="../editor/editNews.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+
+                        <h3>Specifications</h3>
+
+                        <table class="specInfo">
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-mobile" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstZaslon }}''</span></td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-camera" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstFotoaparat }}</span>MP</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstBaterija }}</span>mAh</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-hdd-o" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstProstor }}</span>GB</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-building" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstRam }}</span>GB RAM</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-code" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstOs }}</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-calendar" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstIzdano }}</span></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <h2>{{ testiranje.tstNaslov }}</h2>
+
+                    <div class="reviewMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>{{ testiranje.tstAvtor.upr.username }}</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>{{ testiranje.tstDatum|date:"d.m.Y" }}</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Novice</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>{{ testiranje.tstOpis }}</p>
+
+                    <p>{{ testiranje.tstBesedilo|truncatechars:2048 }} <a href="">VEČ</a></p>
+                </section>
+            {% endfor %}
+
+
+            <section class="pagination">
+                <ul>
+
+                    {% if testiranja.has_previous %}
+                        <li><a href="?page={{ testiranja.previous_page_number }}">«</a></li>
+                    {% endif %}
+
+                    {% for i in stStrani %}
+                        {% if forloop.counter == trenutnaStran %}
+                            <li><a class="active" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                        {% else %}
+                            <li><a href="?page={{ forloop.counter }}">{{ forloop.counter }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if testiranja.has_next %}
+                        <li><a href="?page={{ testiranja.next_page_number }}">»</a></li>
+                    {% endif %}
+
+                </ul>
+            </section>
+
+            {% include 'footer.html' %}
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,291 @@
+@media only screen
+and (min-width: 768px)
+and (max-width: 1023px) {
+    .review img {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .review h2 {
+        margin-bottom: 10px;
+    }
+
+    .review p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .reviewMeta {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .reviewMeta * {
+        display: inline-block;
+    }
+
+    /*  CUSTOM REVIEW STYLING    */
+    .review {
+        background-color: rgba(233, 204, 32, 0.7);
+        margin: 30px;
+        padding: 30px;
+    }
+
+    .review a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .review a:hover {
+        text-decoration: underline;
+        color: #444444;
+    }
+
+    .specifications {
+        float: right;
+        width: 35%;
+        height: 344px;
+    }
+
+    .specifications h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+    }
+
+    .specInfo {
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .specInfo i, .bigger {
+        font-size: 28px;
+    }
+
+    .specInfoIcon {
+        width: 100px;
+        text-align: center;
+    }
+
+    .specInfo input {
+        width: 100px;
+        margin-right: 10px;
+    }
+
+    .editReviewMeta {
+        float: right;
+        font-size: 25px;
+    }
+
+    /* EDIT REVIEW  */
+    .singleReview {
+        margin: 30px;
+        padding: 30px;
+        background-color: rgba(228, 64, 110, 0.7);
+    }
+
+    .singleReview img {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+
+    .singleReview h2 {
+        margin-bottom: 10px;
+    }
+
+    .singleReview p {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    .singleReviewMeta {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .singleReviewMeta * {
+        display: inline-block;
+    }
+
+    /*  SINGLE REVIEWS  */
+    .singleReview {
+        background-color: rgba(233, 204, 32, 0.7);
+    }
+
+    /*  AUTHOR    */
+    .author {
+        margin: 30px;
+        padding: 30px;
+        border: 5px solid #b6b6b6;
+    }
+
+    .author img {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+    }
+
+    .author h2 {
+        margin-bottom: 20px;
+    }
+
+    .author p {
+        margin-bottom: 0px;
+    }
+
+    /*  COMMENT */
+    .comment {
+        margin: 30px;
+    }
+
+    .comment h3 {
+        margin-bottom: 10px;
+    }
+
+    .comment textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .commentButton, .saveButton {
+        margin-top: 10px;
+        width: 150px;
+        height: 39px;
+        background-color: #4caf50;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .saveButton {
+        margin-left: 30px;
+    }
+
+    .cancelButton {
+        margin-top: 10px;
+        width: 150px;
+        height: 39px;
+        background-color: #c4393e;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /*  VIEW COMMENTS   */
+    .viewComments {
+        margin: 30px;
+    }
+
+    .singleComment {
+        padding: 15px;
+        background-color: #aaaaaa;
+    }
+
+    .singleComment:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+
+    .singleCommentMeta {
+        float: right;
+        font-size: 25px;
+    }
+
+    .singleComment h4 {
+        margin-bottom: 10px;
+    }
+
+    /*  EDIT REVIEW   */
+    .singleReview input, .singleReview textarea, .authorPickImage input, .author textarea {
+        line-height: 30px;
+        color: white;
+        font-size: 14px;
+        border: none;
+        box-sizing: border-box;
+        background-color: #6a6a6a;
+        padding-left: 10px;
+    }
+
+    .singleReviewPickImage, .authorPickImage {
+        float: left;
+        width: 300px;
+    }
+
+    .singleReviewPickImage img, .authorPickImage img {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .authorPickImage {
+        margin-top: 80px;
+    }
+
+    .pickImage {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 290px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    .singleReviewPickTitleDate {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .pickTitle {
+        width: 180px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .pickDate {
+        width: 180px;
+        margin-left: 49px;
+        margin-top: 10px;
+    }
+
+    .singleReviewPickDescription {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .singleReviewPickDescription textarea {
+        width: 100%;
+        height: 150px;
+    }
+
+    .pickText {
+        width: 100%;
+        height: 100%;
+    }
+
+    .authorPickImage input {
+        width: 280px;
+    }
+
+    .pickUserDescription {
+        width: 52%;
+        height: 280px;
+    }
+
+
+    /* CUSTOM SPECIFICATIONS FOR EDITING */
+    .singleReview .specifications {
+        display: inline-block;
+        width: 50%;
+        height: 500px;
+    }
+
+}
+
+
+

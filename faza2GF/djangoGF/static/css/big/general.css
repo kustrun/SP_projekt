@@ -1,0 +1,42 @@
+@media only screen
+and (min-width: 1224px) {
+
+    @font-face {
+        font-family: Oswald;
+        src: url("../../fonts/Oswald.ttf");
+    }
+
+    @font-face {
+        font-family: Raleway;
+        src: url("../../fonts/Raleway.ttf");
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        width: 1224px;
+        margin: auto;
+
+        background: url("../../images/background.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .content {
+        background-color: #f5f5f5;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: Oswald, sans-serif;;
+    }
+
+    a, p, table, form, input, button, textarea {
+        font-family: Raleway, sans-serif;
+    }
+
+}

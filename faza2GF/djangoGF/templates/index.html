@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Gadget freak</title>
+
+        <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
+
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="{% static 'css/big/general.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/logo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/navigation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/trending.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/exposedNews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/review.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/devices.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/lastNewsAndReviews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/big/footer.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/medium-big/general.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/logo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/navigation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/trending.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/exposedNews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/review.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/devices.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/lastNewsAndReviews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-big/footer.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/medium-small/general.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/logo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/navigation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/trending.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/exposedNews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/review.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/devices.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/lastNewsAndReviews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/medium-small/footer.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/small/general.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/logo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/navigation.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/trending.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/exposedNews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/review.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/devices.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/lastNewsAndReviews.css' %}">
+        <link rel="stylesheet" href="{% static 'css/small/footer.css' %}">
+
+        <!-- SCRIPTS -->
+        <script src="{% static 'js/navigation.js' %}"></script>
+        <script src="{% static 'js/loginRegister.js' %}"></script>
+        <script src="{% static 'js/devices.js' %}"></script>
+        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    </head>
+
+    <body>
+        <div class="content">
+
+            {% include "header.html" %}
+
+            {% include "navigation.html" %}
+
+            <section class="trending">
+                <h4>TRENDING</h4>
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                <a href="">LOREM IPSUM DOLO SIT AMET, CONSECTETUR ADIPISCING ELIT</a>
+            </section>
+
+            <section class="exposedNews">
+
+                 {% for glavnaNovica in glavniNovici %}
+
+                    <div class="bigNews">
+                        <div class="bigNewsImage">
+                            <img src="{% static 'images/'%}{{ glavnaNovica.nvcSlika }}" alt="bigNewsPic">
+                        </div>
+
+                        <div class="bigNewsInfo">
+                            <h2>{{ glavnaNovica.nvcNaslov }}</h2>
+
+                            <div class="bigNewsMeta">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>{{ glavnaNovica.nvcAvtor.upr.username }}</p>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <p>{{ glavnaNovica.nvcDatum|date:"d.m.Y" }}</p>
+                                <i class="fa fa-folder-o" aria-hidden="true"></i>
+                                <p>Novice</p>
+                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                <p>3</p>
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <p>28227</p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                {% for malaNovica in maleNovice %}
+
+                    <div class="smallNews">
+                        <div class="smallNewsImage">
+                            <img src="{% static 'images/' %}{{ malaNovica.nvcSlika }}" alt="smallNewsPic">
+                        </div>
+
+                        <div class="smallNewsInfo">
+                            <h3>{{ malaNovica.nvcNaslov }}</h3>
+
+                            <div class="smallNewsMeta">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>{{ malaNovica.nvcAvtor.upr.username }}</p>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <p>{{ malaNovica.nvcDatum|date:"d.m.Y" }}</p>
+                                <i class="fa fa-folder-o" aria-hidden="true"></i>
+                                <p>Novice</p>
+                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                                <p>3</p>
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <p>28227</p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </section>
+
+            <section class="review">
+                {% for testiranje in zadnjeTestiranje %}
+
+                    <img src="{% static 'images/' %}{{ testiranje.tstSlika  }}" alt="reviewPic">
+
+                    <div class="specifications">
+                        <h3>Specifikacije</h3>
+
+                        <table class="specInfo">
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-mobile" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstZaslon }}''</span></td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-camera" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstFotoaparat }}</span>MP</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstBaterija }}</span>mAh</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-hdd-o" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstProstor }}</span>GB</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-building" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstRam }}</span>GB RAM</td>
+                            </tr>
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-code" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstOs }}</span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="specInfoIcon"><i class="fa fa-calendar" aria-hidden="true"></i></td>
+                                <td><span class="bigger">{{ testiranje.tstIzdano }}</span></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <h2>{{ testiranje.tstNaslov }}</h2>
+
+                    <div class="reviewMeta">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <p>{{ testiranje.tstAvtor.upr.username }}</p>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <p>{{ testiranje.tstDatum|date:"d.m.Y" }}</p>
+                        <i class="fa fa-folder-o" aria-hidden="true"></i>
+                        <p>Testiranja</p>
+                        <i class="fa fa-comment-o" aria-hidden="true"></i>
+                        <p>3</p>
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                        <p>28227</p>
+                    </div>
+
+                    <p>{{ testiranje.tstOpis }}</p>
+
+                    <p>{{ testiranje.tstBesedilo|truncatechars:2048 }} <a href="">VEČ</a></p>
+
+                {% endfor %}
+
+            </section>
+
+            <section class="lastNewsAndReviews">
+                <h2>NEWS</h2>
+
+                {% for novica in novice %}
+
+                    <div class="newsReviews">
+                        <img class="newsImg" src="{% static 'images/' %}{{ novica.nvcSlika }}" alt="newsPic" />
+                        <h3>Title</h3>
+
+                        <div class="newsReviewsMeta">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>{{ novica.nvcAvtor.upr.username }}</p>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>{{ novica.nvcDatum|date:"d.m.Y" }}</p>
+                            <i class="fa fa-folder-o" aria-hidden="true"></i>
+                            <p>Novice</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>3</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>28227</p>
+                        </div>
+
+                        <p>{{ novica.nvcOpis }}</p>
+
+                    </div>
+
+                {% endfor %}
+
+             </section>
+
+            <section class="devices">
+
+                <div class="top10Devices">
+                    <table>
+
+                        {% for ocenaNaprave in oceneNaprav %}
+
+                            <tr onclick="selectDevice(this)" {% if forloop.counter == 1 %} class="selectedDevice" {% endif %}>
+                                <td class="deviceRang">{{ forloop.counter }}.</td>
+                                <td class="deviceName">{{ ocenaNaprave.nvcNaslov }}</td>
+                                <td class="devicePopularity">1500</td>
+                            </tr>
+
+                        {% endfor %}
+
+                    </table>
+                </div>
+
+
+                {% for ocenaNaprave in oceneNaprav %}
+
+                    <div class="device">
+                         <img src="{% static 'images/' %}{{ ocenaNaprave.nvcSlika }}" alt="smallNewsPic">
+                        <h2>{{ ocenaNaprave.nvcNaslov }}</h2>
+
+                        <div class="devicesMeta">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>{{ ocenaNaprave.nvcAvtor.upr.username }}</p>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>{{ ocenaNaprave.nvcDatum|date:"d.m.Y" }}</p>
+                            <i class="fa fa-folder-o" aria-hidden="true"></i>
+                            <p>Novice</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>3</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>28227</p>
+                        </div>
+
+                        <p>{{ ocenaNaprave.nvcOpis }}</p>
+
+                        <p>{{ ocenaNaprave.nvcBesedilo|truncatechars:2048 }} <a href="">VEČ</a></p>
+                    </div>
+
+                {% endfor %}
+
+            </section>
+
+            {% include "footer.html" %}
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+{% load static %}
+
+<footer>
+    <div class="aboutTop5">
+
+        <section class="top5news">
+            <h3>LATEST NEWS</h3>
+
+
+            {% for zadnjaNovica in zadnjih5Novic %}
+
+                <div class="theNews">
+                    <img src="{% static 'images/' %}{{ zadnjaNovica.nvcSlika }}">
+
+                    <div class="theNewsInfo">
+                        <h4>{{ zadnjaNovica.nvcNaslov }}</h4>
+                        <div class="theNewsMeta">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>{{ zadnjaNovica.nvcAvtor.upr.username }}</p>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>{{ zadnjaNovica.nvcDatum|date:"d.m.Y" }}</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>3</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>28227</p>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </section>
+
+        <section class="top5reviews">
+            <h3>LATEST TESTINGS</h3>
+
+            {% for zadnjeTestiranje in zadnjih5Testiranj %}
+
+                <div class="theReview">
+                    <img src="{% static 'images/' %}{{ zadnjeTestiranje.tstSlika }}">
+
+                    <div class="theReviewInfo">
+                       <h4>{{ zadnjeTestiranje.tstNaslov }}</h4>
+                        <div class="theReviewMeta">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p>{{ zadnjeTestiranje.tstAvtor.upr.username }}</p>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <p>{{ zadnjeTestiranje.tstDatum|date:"d.m.Y" }}</p>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <p>3</p>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <p>28227</p>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </section>
+
+        <section class="about">
+            <div class="logo">
+                <h1>GADGET FREAK</h1>
+                <h5>GADGET NEWS AND REVIEWS</h5>
+            </div>
+
+            <p>Spletna stran GadgetFreak je projekt izdelan v okviru predmeta Spletno programiranje</p>
+
+            <h3>NALOGA:</h3>
+            <p>Vaša prijateljica Rozina ima idejo kako združiti vse ljubitelje takšnih in drugačnih elektronskih naprav, po domače gadgetov. Rada bi naredila neke sorte družbeno omrežje, kjer si bodo lahko lastniki različnih naprav izmenjali izkušnje. Rozina ima samo eno težavo... ne ve prav nič o spletnem programiranju.</p>
+        </section>
+    </div>
+
+    <div class="copyright">
+
+    </div>
+
+</footer>
