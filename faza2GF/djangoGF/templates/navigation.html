@@ -1,19 +1,18 @@
 <script>
 
 $(document).ready(function() {
-    $('button[name="login"]').click(function(e) {
+
+    var loginForm = $('.loginDiv');
+    loginForm.submit(function(e) {
 
         if($(".loginDiv")[0].checkValidity()) {
             e.preventDefault();
 
             $.ajax({
-                type: "POST",
-                url: "http://localhost:8000/login",
+                type: loginForm.attr('method'),
+                url: loginForm.attr('action'),
                 headers: {"X-CSRFToken": getCookie("csrftoken")},
-                data: {
-                    username: $('input[name="usernameLogin"]').val(),
-                    password: $('input[name="passwordLogin"]').val()
-                },
+                data: loginForm.serialize(),
 
                 success: function (response) {
                     if(response['result'] == "success") {
@@ -39,10 +38,68 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             url: "http://localhost:8000/logout",
+            headers: {"X-CSRFToken": getCookie("csrftoken")},
 
             success: function (response) {
                 if(response['result'] == "success") {
 
+                    location.reload();
+
+                }
+            }
+        });
+    });
+
+
+    var registerForm = $('.register');
+    registerForm.submit(function(e) {
+
+        e.preventDefault();
+
+        $(".errorMessage p").text("");
+
+        $.ajax({
+            type: registerForm.attr('method'),
+            url: registerForm.attr('action'),
+            headers: {"X-CSRFToken": getCookie("csrftoken")},
+            data: registerForm.serialize(),
+
+            success: function (response) {
+                if(response['result'] == "success") {
+
+                    closeLoginDialog();
+                    location.reload();
+
+                } else if(response['result'] == "fail") {
+
+                    if(response['username']) {
+                        $(".errorMessage p").append("Username already exists.");
+                    }
+
+                    $(".errorMessage").css("visibility", "visible");
+                    setTimeout(function(){$(".errorMessage").css("visibility", "hidden")}, 5000);
+
+                }
+            }
+        });
+
+    });
+
+    var forgottenPasswordForm = $('.forgotPassword');
+    forgottenPasswordForm.submit(function(e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: forgottenPasswordForm.attr('method'),
+            url: forgottenPasswordForm.attr('action'),
+            headers: {"X-CSRFToken": getCookie("csrftoken")},
+            data: forgottenPasswordForm.serialize(),
+
+            success: function (response) {
+                if(response['result'] == "success") {
+
+                    closeLoginDialog();
                     location.reload();
 
                 } else if(response['result'] == "fail") {
@@ -53,7 +110,9 @@ $(document).ready(function() {
                 }
             }
         });
+
     });
+
 
     function getCookie(cname) {
         var name = cname + "=";
@@ -98,9 +157,39 @@ $(document).ready(function() {
 
                 <div class="loginModal">
 
-                    <!-- LOGIN -->
-                    <form class="loginDiv">
+                    <form method="POST" action="{% url 'loginUser' %}" class="loginDiv">
                         {% csrf_token %}
+                        <div class="loginModalIcon">
+                            <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                            <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="errorMessage" style="visibility: hidden">
+
+                            <i class="fa fa-exclamation" aria-hidden="true"></i>
+                            <p>Passwords do not match.</p>
+
+                        </div>
+
+
+                        <div class="loginModalUserInput">
+                            {{ loginForm.as_p }}
+
+                            <button type="submit">Login</button>
+                        </div>
+
+                        <div class="loginModalAction">
+                            <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                            <a href="#" onclick="showForgotPasswordDialog()">Forgot password?</a>
+                            <a href="#" onclick="showRegisterDialog()">Register</a>
+                        </div>
+                    </form>
+
+
+                    <!-- LOGIN
+                    <form class="loginDiv">
+                        manjka csrf_token
                             <div class="loginModalIcon">
                                 <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
 
@@ -129,9 +218,37 @@ $(document).ready(function() {
                                 <a href="#" onclick="showForgotPasswordDialog()">Forgot password?</a>
                                 <a href="#" onclick="showRegisterDialog()">Register</a>
                             </div>
+                    </form>-->
+
+
+                    <form method="POST" action="{% url 'registerUser' %}" class="register">
+                        {% csrf_token %}
+                        <div class="loginModalIcon">
+                            <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="errorMessage" style="visibility: hidden">
+
+                            <i class="fa fa-exclamation" aria-hidden="true"></i>
+                            <p></p>
+
+                        </div>
+
+                        <div class="loginModalUserInput">
+                            {{ registerForm.as_p }}
+
+                            <button type="submit">Register</button>
+                        </div>
+
+                        <div class="loginModalAction">
+                            <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                            <a href="#" onclick="showLoginDivDialog()">Login</a>
+                        </div>
                     </form>
 
-                        <!-- REGISTER -->
+                        <!-- REGISTER
                     <form class="register" action="#">
                         <div class="loginModalIcon">
                             <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
@@ -156,9 +273,36 @@ $(document).ready(function() {
                             <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
                             <a href="#" onclick="showLoginDivDialog()">Login</a>
                         </div>
+                    </form> -->
+
+
+                    <form method="POST" action="{% url 'forgottenPassword' %}"  class="forgotPassword">
+                        <div class="loginModalIcon">
+                            <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
+
+                            <i class="fa fa-user-secret" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="errorMessage" style="visibility: hidden">
+
+                            <i class="fa fa-exclamation" aria-hidden="true"></i>
+                            <p>Email does not exist.</p>
+
+                        </div>
+
+                        <div class="loginModalUserInput">
+                            {{ forgottenForm.as_p }}
+
+                            <button type="submit">Reset password</button>
+                        </div>
+
+                        <div class="loginModalAction">
+                            <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
+                            <a href="#" onclick="showLoginDivDialog()">Login</a>
+                        </div>
                     </form>
 
-                    <!-- FORGOT PASSWORD -->
+                    <!-- FORGOT PASSWORD
                     <form class="forgotPassword" action="#">
                         <div class="loginModalIcon">
                             <i onclick="closeLoginDialog()" class="fa fa-times" aria-hidden="true"></i>
@@ -177,7 +321,7 @@ $(document).ready(function() {
                             <button onclick="closeLoginDialog()" type="button" class="cancel">Cancel</button>
                             <a href="#" onclick="showLoginDivDialog()">Login</a>
                         </div>
-                    </form>
+                    </form>-->
 
                 </div>
 

@@ -1,144 +1,136 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="../../static/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css'%}/font-awesome/css/font-awesome.min.css">
 
     <!-- STYLESHEET -->
-    <link rel="stylesheet" href="../../static/css/big/general.css">
-    <link rel="stylesheet" href="../../static/css/big/logo.css">
-    <link rel="stylesheet" href="../../static/css/big/navigation.css">
-    <link rel="stylesheet" href="../../static/css/big/trending.css">
-    <link rel="stylesheet" href="../../static/css/big/exposedNews.css">
-    <link rel="stylesheet" href="../../static/css/big/review.css">
-    <link rel="stylesheet" href="../../static/css/big/lastNewsAndReviews.css">
-    <link rel="stylesheet" href="../../static/css/big/pagination.css">
-    <link rel="stylesheet" href="../../static/css/big/footer.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/general.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/logo.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/navigation.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/trending.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/exposedNews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/review.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/lastNewsAndReviews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/pagination.css">
+    <link rel="stylesheet" href="{% static 'css'%}/big/footer.css">
 
-    <link rel="stylesheet" href="../../static/css/medium-big/general.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/logo.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/navigation.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/trending.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/exposedNews.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/review.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/lastNewsAndReviews.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/pagination.css">
-    <link rel="stylesheet" href="../../static/css/medium-big/footer.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/general.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/logo.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/navigation.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/trending.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/exposedNews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/review.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/lastNewsAndReviews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/pagination.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-big/footer.css">
 
-    <link rel="stylesheet" href="../../static/css/medium-small/general.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/logo.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/navigation.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/trending.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/exposedNews.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/review.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/lastNewsAndReviews.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/pagination.css">
-    <link rel="stylesheet" href="../../static/css/medium-small/footer.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/general.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/logo.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/navigation.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/trending.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/exposedNews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/review.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/lastNewsAndReviews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/pagination.css">
+    <link rel="stylesheet" href="{% static 'css'%}/medium-small/footer.css">
 
-    <link rel="stylesheet" href="../../static/css/small/general.css">
-    <link rel="stylesheet" href="../../static/css/small/logo.css">
-    <link rel="stylesheet" href="../../static/css/small/navigation.css">
-    <link rel="stylesheet" href="../../static/css/small/trending.css">
-    <link rel="stylesheet" href="../../static/css/small/exposedNews.css">
-    <link rel="stylesheet" href="../../static/css/small/review.css">
-    <link rel="stylesheet" href="../../static/css/small/lastNewsAndReviews.css">
-    <link rel="stylesheet" href="../../static/css/small/pagination.css">
-    <link rel="stylesheet" href="../../static/css/small/footer.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/general.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/logo.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/navigation.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/trending.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/exposedNews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/review.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/lastNewsAndReviews.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/pagination.css">
+    <link rel="stylesheet" href="{% static 'css'%}/small/footer.css">
 
     <!-- SCRIPTS -->
-    <script src="http://www.w3schools.com/lib/w3data.js"></script>
-    <script src="../../static/js/navigation.js"></script>
-    <script src="../../static/js/loginRegister.js"></script>
-    <script src="../../static/js/devices.js"></script>
+    <script src="{% static 'js'%}/navigation.js"></script>
+    <script src="{% static 'js'%}/loginRegister.js"></script>
+    <script src="{% static 'js'%}/devices.js"></script>
 </head>
 
 <body>
 <div class="content">
 
-    <div w3-include-html="../header.html"></div>
-    <div w3-include-html="../navigation.html"></div>
-    <div w3-include-html="../trending.html"></div>
+    {% include 'header.html' %}
+    {% include 'navigation.html' %}
+    {% include 'trending.html' %}
 
     <section class="singleReview">
-        <img src="../../static/images/iphone7.png" alt="reviewPic">
+        <img src="{% static 'images'%}/{{ testiranje.tstSlika }}" alt="reviewPic">
 
         <div class="specifications">
-            <h3>Specifications</h3>
+            <h3>Specifasdfikacije</h3>
 
             <table class="specInfo">
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-mobile" aria-hidden="true"></i></td>
-                    <td><span class="bigger">5.5''</span></td>
+                    <td><span class="bigger">{{ testiranje.tstZaslon }}''</span></td>
                 </tr>
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-camera" aria-hidden="true"></i></td>
-                    <td><span class="bigger">12</span>MP</td>
+                    <td><span class="bigger">{{ testiranje.tstFotoaparat }}</span>MP</td>
                 </tr>
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-battery-three-quarters" aria-hidden="true"></i></td>
-                    <td><span class="bigger">2900</span>mAh</td>
+                    <td><span class="bigger">{{ testiranje.tstBaterija }}</span>mAh</td>
                 </tr>
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-hdd-o" aria-hidden="true"></i></td>
-                    <td><span class="bigger">16/32</span>GB</td>
+                    <td><span class="bigger">{{ testiranje.tstProstor }}</span>GB</td>
                 </tr>
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-building" aria-hidden="true"></i></td>
-                    <td><span class="bigger">3</span>GB RAM</td>
+                    <td><span class="bigger">{{ testiranje.tstRam }}</span>GB RAM</td>
                 </tr>
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-code" aria-hidden="true"></i></td>
-                    <td><span class="bigger">iOS</span></td>
+                    <td><span class="bigger">{{ testiranje.tstOs }}</span></td>
                 </tr>
 
                 <tr>
                     <td class="specInfoIcon"><i class="fa fa-calendar" aria-hidden="true"></i></td>
-                    <td><span class="bigger">Sep 2016</span></td>
+                    <td><span class="bigger">{{ testiranje.tstIzdano }}</span></td>
                 </tr>
             </table>
         </div>
 
-        <h2>DEVICE NAME 1</h2>
+        <h2>{{ testiranje.tstNaslov }}</h2>
 
         <div class="singleReviewMeta">
             <i class="fa fa-user" aria-hidden="true"></i>
-            <p>Domen</p>
+            <p>{{ testiranje.tstAvtor.upr.username }}</p>
             <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <p>05. 11. 2016</p>
+            <p>{{ testiranje.tstDatum|date:"d.m.Y" }}</p>
             <i class="fa fa-folder-o" aria-hidden="true"></i>
-            <p>Novice</p>
+            <p>Testiranja</p>
             <i class="fa fa-comment-o" aria-hidden="true"></i>
             <p>3</p>
             <i class="fa fa-eye" aria-hidden="true"></i>
             <p>28227</p>
         </div>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec. </p>
+        <p>{{ testiranje.tstOpis }}</p>
 
-        <p>Nunc laoreet mollis augue non consectetur. Vivamus varius tellus a sagittis semper. In ac turpis vitae turpis volutpat tempus non bibendum orci. Pellentesque varius accumsan risus, eget elementum elit maximus ut. Proin ante nulla, pharetra luctus nibh ultricies, blandit bibendum mi. Nulla sagittis, ex sit amet rutrum molestie, tellus mauris luctus massa, luctus semper nisi quam at sem. Phasellus vitae lacinia tortor, sit amet fringilla eros. Donec quis tincidunt nisi. Ut nec faucibus sem. Pellentesque nec tincidunt quam. Etiam sollicitudin felis in consectetur commodo. Donec non bibendum tellus. Cras at neque eleifend, porta nibh vitae, consequat justo. Proin pulvinar, lacus eget rutrum dapibus, odio mi venenatis orci, ullamcorper accumsan mauris elit sed magna.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae venenatis felis, sit amet consequat arcu. Nullam quam arcu, ultricies vitae eleifend vel, pharetra id purus. Pellentesque faucibus tortor at purus molestie tincidunt. Sed a ultrices lacus. Nulla mattis nec orci ac pretium. Maecenas a orci non neque ullamcorper sagittis in non turpis. Nulla volutpat iaculis dictum. Nam metus massa, maximus quis cursus sed, dictum vitae ante. Curabitur fringilla arcu id venenatis commodo. Sed gravida, lorem a sodales convallis, lorem metus sodales nisl, sit amet lobortis nulla nulla id quam.</p>
-
-        <p>Etiam et mauris at justo sodales consectetur. Donec vitae varius nulla. Nunc quis porttitor orci, interdum euismod ligula. Maecenas erat lectus, faucibus sed pretium id, congue et enim. Fusce varius tincidunt lobortis. Aliquam feugiat vitae erat nec mattis. Ut fringilla dolor vitae risus suscipit pretium et id turpis. Aliquam ultrices vel magna elementum consequat. Ut vel erat eros. Donec rhoncus in ante id consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit massa et posuere suscipit. Pellentesque ut nunc et est sollicitudin scelerisque vel quis turpis. Vivamus vulputate quis est non laoreet. Praesent scelerisque ornare dui vel tristique.</p>
-
-        <p>In eget odio vitae purus maximus lobortis at vitae nunc. Etiam semper dictum tellus sed dignissim. Phasellus congue venenatis est, ut gravida nunc accumsan quis. Vivamus blandit orci vel arcu convallis ultrices. Sed eget nibh nec enim venenatis aliquam. Pellentesque nibh diam, aliquam hendrerit ex id, tincidunt tincidunt ante. Sed ultrices purus turpis, at ultricies justo tristique sit amet. Sed sit amet ex in massa volutpat semper varius sit amet velit. Donec in magna semper quam porta posuere at vitae mauris. Donec sed nisi ac urna blandit consectetur. Nunc rhoncus magna in lectus consequat, ut scelerisque eros vestibulum. Phasellus elementum dapibus eleifend.</p>
-
-        <p>Duis sagittis molestie neque, eu consectetur tortor aliquet vel. Mauris rutrum, leo quis molestie ullamcorper, massa erat sollicitudin ante, scelerisque consequat augue mauris ut sapien. Nam convallis velit non augue pretium cursus. Nullam feugiat purus turpis, ut malesuada felis sollicitudin interdum. Nullam dignissim eu libero gravida suscipit. Duis vel nisi dui. Maecenas et porttitor nulla. Fusce a bibendum est. Mauris sed sapien quam. Mauris neque velit, pulvinar sit amet justo ornare, fermentum mattis nunc. Fusce at leo dolor. Integer eros metus, aliquam eu auctor at, ornare et felis. Nulla et lorem et diam pretium eleifend at eu lacus. Fusce euismod arcu turpis, at egestas velit volutpat egestas. Curabitur ullamcorper dolor et mauris tempor, sed vulputate erat condimentum. Mauris nec erat sit amet justo tincidunt viverra.</p>
-
-        <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
+        <p>{{ testiranje.tstBesedilo }}</p>
     </section>
 
     <section class="author">
-        <img src="../../static/images/author.jpg" alt="authorPic">
-        <h2>Domen Balantič</h2>
+        <img src="{% static 'images' %}/author.jpg" alt="authorPic">
+        <h2>{{ testiranje.tstAvtor.upr.first_name }} {{ testiranje.tstAvtor.upr.last_name }}</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies nisi mi, quis dapibus quam tempor et. Fusce rutrum scelerisque lorem nec tempus. Pellentesque eu metus id risus bibendum ullamcorper a sit amet augue. Quisque pellentesque ut est at lacinia. Ut gravida convallis ante, sed semper diam ornare nec.Etiam et mauris at justo sodales consectetur. Donec vitae varius nulla. Nunc quis porttitor orci, interdum euismod ligula. Maecenas erat lectus, faucibus sed pretium id, congue et enim. Fusce varius tincidunt lobortis. Aliquam feugiat vitae erat nec mattis. Ut fringilla dolor vitae risus suscipit pretium et id turpis. Aliquam ultrices vel magna elementum consequat. Ut vel erat eros. Donec rhoncus in ante id consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit massa et posuere suscipit. Pellentesque ut nunc et est sollicitudin scelerisque vel quis turpis. Vivamus vulputate quis est non laoreet. Praesent scelerisque ornare dui vel tristique.</p>
+        <p>{{ testiranje.tstAvtor.uprOpis }}</p>
     </section>
 
     <section class="comment">
         <h3>Comment</h3>
+
         <form>
             <textarea></textarea>
 
@@ -148,80 +140,20 @@
     </section>
 
     <section class="viewComments">
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
 
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
+        {% for komentar in komentarji %}
 
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
+            <div class="singleComment">
+                <h4>{{ komentar.kmtAvtor.upr.first_name }} {{ komentar.kmtAvtor.upr.last_name }}</h4>
+                <p>{{ komentar.kmtBesedilo }}</p>
+            </div>
 
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
+        {% endfor %}
 
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
-
-        <div class="singleComment">
-            <h4>Domen Balantič</h4>
-            <p>Fusce quis dui convallis, commodo enim ac, placerat lorem. Aenean lobortis sapien quis felis ornare porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin risus nibh, venenatis nec pellentesque id, maximus ut justo. Phasellus semper rhoncus eleifend. Nam tempor mi et lectus volutpat, et dapibus nisl molestie. Nunc semper purus tincidunt, feugiat turpis id, tempus mauris. Mauris vehicula varius neque vitae scelerisque. Phasellus sit amet vestibulum arcu. Pellentesque placerat eu velit eget blandit.</p>
-        </div>
     </section>
 
-    <section class="pagination">
-        <ul>
-            <li><a href="#">«</a></li>
-            <li><a href="#">1</a></li>
-            <li><a class="active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">6</a></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">»</a></li>
-        </ul>
-    </section>
+    {% include 'footer.html' %}
 
-    <div w3-include-html="../footer.html"></div>
-    <script>
-        w3IncludeHTML();
-    </script>
 </div>
 </body>
 </html>
